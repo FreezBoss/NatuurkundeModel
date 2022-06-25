@@ -33,8 +33,9 @@ class Draad:
         bovenkant = math.pi * vloeistof.straal ** 2 # Pi*r^2
         bak_oppervlakte = bakje.oppervlak # Buitenoppervlak bakje
 
-        straling_verlies_verdamping = (bakje.hoogte - hoogte) * 2 * math.pi * bakje.straal * BiNaS.sigma * (vorige_temperatuur ** 4- buitenlucht_temp**4) * bakje.emissie * dt
+        straling_verlies_verdamping = (bakje.hoogte - hoogte) * 2 * math.pi * bakje.straal * BiNaS.sigma * (vorige_temperatuur ** 4) * bakje.emissie * dt
         straling_verlies_verdamping = straling_verlies_verdamping * (math.pi * vloeistof.straal ** 2) / (2 * ((math.pi * vloeistof.straal ** 2) + bakje.hoogte-hoogte * math.pi * 2 * bakje.straal))
+                straling_verlies_verdamping = straling_verlies_verdamping - (bakje.hoogte - hoogte) * 2 * math.pi * bakje.straal * BiNaS.sigma * (buitenlucht_temp ** 4) * bakje.emissie * dt
        
 
         straling_verlies_bak = BiNaS.sigma * bak_oppervlakte * (vorige_temperatuur ** 4 - buitenlucht_temp ** 4) * bakje.emissie * dt
