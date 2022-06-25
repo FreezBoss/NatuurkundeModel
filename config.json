@@ -1,0 +1,38 @@
+{
+
+    "algemeen": {
+
+        "starttempratuur": 288.15
+
+    },
+
+    "draad": {
+
+        "meteriaal": "constantaan",
+
+        "voltage": 12,
+
+        "lengte": 30e-2,
+        "straal": 5e-4
+
+    },
+
+    "vloeistof": {
+
+        "materiaal": "water",
+
+        "straal": 6e-2,
+        "hoogte": 1.7683882e-2
+
+    },
+
+    "bakje": {
+
+        "materiaal": "alluminium",
+
+        "straal": 6e-2,
+        "hoogte": 12e-2,
+        "dikte": 2e-3
+
+    }
+}
